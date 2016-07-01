@@ -1,0 +1,13 @@
+ID		ServerIp			ServerName			
+1		192.168.10.65			Samba
+2		192.168.10.120		       	Mail
+3		192.168.10.145			Glip
+4		192.168.10.90			Vmware Esxi
+5		192.168.20.51			ImgServer	
+6		192.168.100.254			OpenNebula
+7		192.168.20.51			ImgSrv_Install_Ip
+8		192.168.10.230			OwnCloud Server
+9		192.168.10.231			OwnCloud_MySql_Slave1
+10		192.168.10.232			OwnCloud_MySql_Slave2
+11		192.168.10.20			ihefe_Img_srv_20
+12		192.168.10.1			ihefe_main_ldap_srv
