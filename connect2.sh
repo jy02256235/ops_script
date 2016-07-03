@@ -13,7 +13,10 @@ Print_Context=(
 "Connect Manager Session Host List"
 #"Session Host List"
 );
-
+function usage ()
+{
+	echo "Usage:connect [username] Option [port] Option [SSH_Feature scp] arg [c2s|s2c] "
+}
 
 function ProfileGen()
 {
@@ -86,7 +89,7 @@ function SSH_Feature ()
 
 	while true;
 	do
-		[ $# -lt 1 ] && echo "Usage:connect [username] Option [port] Option [SSH_Feature scp] arg [c2s|s2c] " && exit 128
+		[ $# -lt 1 ] && usage && exit 128
 		Print_Menu_Title Main_Menu
 		cat $Group_list
 		read -p "Choose a Group : " Select
@@ -131,6 +134,7 @@ ARGV_Process()
 	if [[ -z "${UsingMethod}" ]];then
 		ssh -o "ConnectTimeout 1" -p${ServerPort[$i-1]} ${Login_Name}@${ServerIp[$i-1]}
 	else
+		 [[ -z "${scp_mode}" ]]  && usage && exit 129
 		read -p "Enter Destination File Path(e.g:/usr/local/bin/...): " DestinationFile
 		read -p "Enter Source File Path(e.g:/localhost/...): " SourceFile
 			if [[ "${scp_mode}" == "c2s" ]];then
