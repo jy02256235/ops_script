@@ -11,3 +11,5 @@ ID		ServerIp			ServerName		Port
 10		192.168.10.232			OwnCloud_MySql_Slave2	22	
 11		192.168.10.20			ihefe_Img_srv_20	22
 12		192.168.10.1			ihefe_main_ldap_srv	22
+13		203.110.176.99			ihefe_Pptp		22023
+14		ihefe.dyndns			ihefe_backdoor		20202
